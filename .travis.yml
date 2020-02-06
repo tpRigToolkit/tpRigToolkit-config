@@ -7,27 +7,14 @@ install:
 script:
 - find . -name \*.py -exec pycodestyle --max-line-length=120 --ignore=E402 {} +
 - pytest --cov=tpRigToolkit
-- sphinx-apidoc -f -e -o docs/sphinx tpRigToolkit
-- sphinx-build -M html ./docs/sphinx ./
 after_success:
 - coveralls
-- cd html && touch .nojekyll && cd ../
 deploy:
-  matrix:
-  - provider: pages
-    skip_cleanup: true
-    github_token: "$GITHUB_TOKEN"
-    keep_history: true
-    local_dir: html
-    on:
-      branch: master
-  - provider: pypi
-    skip_cleanup: true
-    user: tpoveda
-    password:
-      secure: WFsgbeXD9GLpF924bD0hjRrsjCmT3lEM1a5IAwtX+tAu6XzkVZ7gYDSzxXuKLwIyrPDnUfNUI4Ku3m1U22Sr15N7L6/B3b7PnikV7nAfdyGaIX3b6V+2Nu1wJbrn36oxaRuirv4igMxcn1asjGzb+/7x7MbW0HK3w+SqtXMiNP6XBMcXvHroGrbbCBi2/6Kf3HAfw/ITC/gtG3F6kDJcP11xiOwWDvjMw8zJW1FX1JZgqbx3Ds3i0fQg1KlU/v7LzS2Zv6AafAF1Tj+9L0X/q3STDgsxGzHtJF2v3/6hydTHXuClfwLyOuhGgXVxvTYmfZveJIUu8U6gw/wtFcp49SCuxwBULK+3RNo89m3w26S2e+LDMAY6PYdlJW4kY2V8KLFN7tx41uqNsCr6M08nt116whRTE9TCwxMdPt2T9geADVCQGJDcMxZHCUnnIF2qphu0GYyVVwaPahS3gnaMIxgPiMOCRrSPZ8lpZAJ8jMXoMAMXRDEFN0l4Mev+J+8+InadVFToaPxJq8vlu5yI1tff2s56bjMLuzyUr4SNhkdvbctoDSoPzLVgWgtoU6D9075MVqy5hljUuGKchNJ2tjKM03qto+9Bddec/WMBkHfXCQ9sIxsWUXcIBrIE3lgMrAvqbSX5gmkTIelxllGctBl3XivgOO1zJcXmsZvRWCA=
-    on:
-      branch: master
-      tags: true
+  skip_cleanup: true
+  provider: pypi
+  user: tpoveda
   password:
-    secure: nVcMOmkngDCxNLUYFwcYLmfnZLKh/ygeb2SkYC9FHXmyZqEsjlCHhktEkSCxKSkL1gHPXsKtSOZ9CgIRR/czysMqdbOdG+IU9FcbG97Uob36qqDddbk+iH/qo+A91V2k/dYNHH9AR8zdu3v8VzSHWXXbJPcUZLm8dZfTg2PH/s+FKQXzS7xRD6BudluzpzESQTldx829r7didZChVoseWoGpUVsvXqBfR+iiX8qmPwN6rq0564Tsoij0aW4YOUwL08BJmscbDUyg0TWGQ52w1PQbsNp9uQFjp0AoFGEmD+DjQR2cAJSUHm9ktlGhKRVdw/wHUm81hP0SZdCT4FXunDGYt/BJlE9n5gvgwrxgOqK0Pk3W+cwidFHPNXmJytdHMT0vyvQ7ElkveH8soWEzJKWaSsaoJEee9EKgWdifn1WImJeQWLaSBAOfREiJQm0ZKEsjPpQ8pyDABsuSs5H6i4Y4bwVdHKjWdpMSnt3tSTVyxIa3vhPGoJ6Q/aSHMWeWFAphPYqsxAPC5xD4wid0J3xE+dqVydJOaygEeiH+OH04++wOpwugFw2i6J44FH/mCz/9K5uDgPjKP2sdx48zzZAeBVcUeB3wUbeeALWef2FvhNkLiGUb10guXVCxbAxUDp9oVu6gh28n2e41laKGMyW5il91dbuuCSaDr7QENPU=
+    secure: U3S3fmmRRZnqTA7S83GrEhv5fKUoBhhF6jy7rQF/6R9+zzkjlXyXfefbtKeqBhAhpk/Mc86qoXk9IGBHhl8XAoDrjeyXeHDqI29zwEKEYOpExJb6liN3TPXd9Iz5MRxPaXQHjMvB3KioELaxxN+tKsga8UFf/xXDb71SvjOtw/RCtUMLw54296LCENsN0lI/YvZKPKdn9h7cWcyQTMsXs678kg0uQ/vTPu4VTgpyICmVD5MdTgOxA/TR7jh1cCxqSkewTpylI5JqwG/nwaSL12RxyBx3zOI3Msl7F1xCDGRCsL+xUg60CZshX3t1e3/6dw+63Z/MUzKg3+0Y2XiSJ4B2TiVPa76zUFP2VU5s5HlNE9IhIGf0QSugfNv3ZJ87rX/m/uZaedlhr4/sqIoLtf+9cT1r/gPe+LoJCxAZfra1oZbFEWY6Hhu0YvxNixoshfDncPG72y0Q+2Nu8QmUQSc12UYmkFKxEYlaNWS/W/eBfc0NFrmHjNZjZ7UN61XsZ3if7S1QXj6DBpH08mogtfbqV8/rZJrotw66VIT/ba6kqfMDckThG2ePJhwU9SOfcfky9+NyeqE6ZbnAf7oFBrujdkByrBdYHiTTEWdptog1LFc5WknImYDg4xwzCOaR/hvTu2YDCFd3Fs0sQyqkgSEVAGTa+TzTPX9U4xr9hxY=
+  on:
+    branch: master
+    tags: true
