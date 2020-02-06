@@ -1,0 +1,4 @@
+#  Configuration file for tpRigToolkits-core
+
+tools:
+  - rignode
