@@ -7,7 +7,7 @@ Module that contains general tests for tpRigToolkit
 
 import pytest
 
-from tpRigToolkit import __version__
+from tpRigToolkit.config import __version__
 
 
 def test_version():
