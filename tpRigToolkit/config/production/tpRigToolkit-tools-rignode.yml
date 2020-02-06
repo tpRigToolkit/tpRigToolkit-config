@@ -1,0 +1,57 @@
+#  Configuration file for tpRigToolkit-tools-rignode
+
+# Defines tool name
+name: Rig Node
+
+# Unique ID for the tool
+id: tpRigToolkit-tools-rignode
+
+# Defines logo name of the tool
+logo: rignode
+
+# Defines icon of the tool
+icon: rignode
+
+# Description of the tool
+description: Node based auto rigger based on PyFlow
+
+# Tags related with this tool
+tags: ['tpRigToolkit', 'autorig', 'node', 'PyFlow']
+
+# Defines the ID used by Sentry to monitorize error traces
+sentry_id: https://eb103b0b3889452c8ab6cdeb020c6e07@sentry.io/2280457
+
+# Directory where tool logger will be created
+logger_dir: ${join(user, "tpRigToolkit", "logs", "tools")}
+
+# Default logger level used by tool logger
+logger_level: INFO
+
+# Directory where tool resources are located
+resources_path: ${join(filename, "resources")}
+
+# File that defines tool logger settings
+logging_file: ${join(filename, "__logging__.ini")}
+
+# Menu representation of this tool
+menu_ui:
+  label: "Rig Node"
+  is_checkable: False
+  is_checked: False
+  load_on_startup: False
+
+# Tool Menu definition where this tool is registered
+menu:
+  - label: Rig Node
+    type: menu
+    children:
+      - id: tpRigToolkit-tools-rignode
+        type: tool
+
+# Tool Shelf definition
+shelf:
+  - name: Rig Node
+    children:
+      - id: tpRigToolkit-tools-rignode
+        displayLabel: False
+        type: tool
