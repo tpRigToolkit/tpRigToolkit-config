@@ -1,0 +1,4 @@
+include tpRigToolkit/config/development/*.yml
+include tpRigToolkit/config/development/maya/*.yml
+include tpRigToolkit/config/production/*.yml
+include tpRigToolkit/config/production/maya/*.yml
