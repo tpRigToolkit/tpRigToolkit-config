@@ -1,4 +1,11 @@
 #  Configuration file for tpRigToolkits-core
 
 tools:
+  - namemanager
+  - renamer
+  - jointorient
+  - controlrig
+  - symmesh
+  - rigbuilder
+  - rigtoolbox
   - rignode

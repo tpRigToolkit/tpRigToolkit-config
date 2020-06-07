@@ -1,0 +1,68 @@
+# List of default suffixes
+suffixes:
+  - Mesh: geo
+  - Joint: jnt
+  - Control: ctrl
+  - Group: grp
+  - Locator: loc
+  - Root: root
+  - Auto: auto
+  - RTS: rts
+  - TRS: trs
+  - Left: L
+  - Left: lft
+  - Right: R
+  - Right: rgt
+  - Center: M
+  - Center: cntr
+  - Center: C
+  - Center: mid
+  - Camera: cam
+  - Curve: crv
+  - Cluster: cls
+  - Follicle: foli
+  - Nurbs: geo
+  - Image Planes: imgp
+  - Locators: loc
+  - Shader: shd
+  - Lights: lgt
+  - Shading Group: shdg
+
+# Dict of default auto suffixes
+auto_suffixes:
+  mesh: geo
+  joint: jnt
+  jointEnd: jntEnd
+  ikHandle: ikHdl
+  ikHandleRp: ikRp
+  ikRPsolver: ikRp
+  ikHandleSc: ikSc
+  ikSCsolver: ikSc
+  group: grp
+  follicle: foli
+  nurbsSurface: geo
+  nurbsCurve: crv
+  imagePlane: imgp
+  aiAreaLight: lgt
+  rsPhysicalLight: lgt
+  PxrRectLight: lgt
+  PxrSphereLight: lgt
+  PxrDiskLight: lgt
+  PxrDistantLight: lgt
+  PxrDomeLight: lgt
+  light: lgt
+  locator: loc
+  lambert: shd
+  blinn: shd
+  phong: shd
+  rampShader: shd
+  phongE: shd
+  surfaceShader: shd
+  useBackground: shd
+  aiStandardSurface: shd
+  RedshiftMaterial: shd
+  PxrSurface: shd
+  shadingGroup: shdg
+  controller: ctrl
+  camera: cam
+  clusterHandle: cls

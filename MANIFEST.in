@@ -1,4 +1,3 @@
-include tpRigToolkit/config/development/*.yml
-include tpRigToolkit/config/development/maya/*.yml
-include tpRigToolkit/config/production/*.yml
-include tpRigToolkit/config/production/maya/*.yml
+recursive-include tpRigToolkit/config/* *.yml
+include versioneer.py
+include tpRigToolkit/config/_version.py
