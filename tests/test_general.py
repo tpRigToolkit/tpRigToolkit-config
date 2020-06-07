@@ -12,4 +12,3 @@ from tpRigToolkit.config import __version__
 
 def test_version():
     assert __version__.get_version()
-
