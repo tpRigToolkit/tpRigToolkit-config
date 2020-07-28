@@ -39,6 +39,9 @@ auto_suffixes:
   ikHandleSc: ikSc
   ikSCsolver: ikSc
   group: grp
+  root: root
+  auto: auto
+  buffer: buffer
   follicle: foli
   nurbsSurface: geo
   nurbsCurve: crv

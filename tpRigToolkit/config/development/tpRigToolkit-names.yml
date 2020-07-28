@@ -1,0 +1,126 @@
+active_rule: New_Rule
+rules:
+- _Serializable_classname: Rule
+  _Serializable_version: '1.0'
+  auto_fix: false
+  description: Default rule for names
+  expression: '{description}_{side}_{id}'
+  iterator_format: '##'
+  name: default
+- _Serializable_classname: Rule
+  _Serializable_version: '1.0'
+  auto_fix: false
+  description: Defines the name of DCC nodes
+  expression: '{description}_{side}_{node_type}_{id}'
+  iterator_format: '###'
+  name: node
+- _Serializable_classname: Rule
+  _Serializable_version: '1.0'
+  auto_fix: false
+  description: Rule used by default by tpRigToolkit-tools-spaceswitcher to setup space
+    switch setups.
+  expression: '{description}_{space_description}_{side}_{node_type}_{id}'
+  iterator_format: None
+  name: space_switch_node
+- _Serializable_classname: Rule
+  _Serializable_version: '1.0'
+  auto_fix: false
+  description: Rule used by default by tpRigToolkit-tools-spaceswitcher to setup space
+    switch setups.
+  expression: '{space_switch_prefix}_{space_switch_attribute}'
+  iterator_format: None
+  name: space_switch_attribute
+template_tokens: []
+templates: []
+tokens:
+- _Serializable_classname: Token
+  _Serializable_version: '1.0'
+  default: 0
+  description: Description of the asset.
+  items: {}
+  name: description
+  override_value: ''
+  values:
+    key: []
+    value: []
+- _Serializable_classname: Token
+  _Serializable_version: '1.0'
+  default: 1
+  description: 'The format of the id
+
+
+    #: Id with a unique numeric value
+
+
+    @: Id with an alphabetic value (lowercase)
+
+
+    @^: Id with an alphabetic value (upperase)
+
+
+    NOTE: @ key do not need multiples keys ( @@, @@@) beause the system
+
+    automatically will add double alphabetic characters if we pass the z character
+    (a...z, aa,ab, ac, ad ...)'
+  items: {}
+  name: id
+  override_value: ''
+  values:
+    key:
+    - iterator
+    value:
+    - '#'
+- _Serializable_classname: Token
+  _Serializable_version: '1.0'
+  default: 0
+  description: ''
+  items: {}
+  name: node_type
+  override_value: ''
+  values:
+    key: []
+    value: []
+- _Serializable_classname: Token
+  _Serializable_version: '1.0'
+  default: 1
+  description: ''
+  name: side
+  override_value: ''
+  values:
+    key:
+    - center
+    - right
+    - left
+    value:
+    - c
+    - r
+    - l
+- _Serializable_classname: Token
+  _Serializable_version: '1.0'
+  default: 1
+  description: Prefix used by all attributes for space switch setups.
+  name: space_switch_prefix
+  override_value: ''
+  values:
+    key:
+    - prefix
+    value:
+    - spaceSwitch
+- _Serializable_classname: Token
+  _Serializable_version: '1.0'
+  default: 0
+  description: Attribute name added for space switch setup node.
+  name: space_switch_attribute
+  override_value: ''
+  values:
+    key: []
+    value: []
+- _Serializable_classname: Token
+  _Serializable_version: '1.0'
+  default: 0
+  description: Description for the space switch node.
+  name: space_description
+  override_value: ''
+  values:
+    key: []
+    value: []

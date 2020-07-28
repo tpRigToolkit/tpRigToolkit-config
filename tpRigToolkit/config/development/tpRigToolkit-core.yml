@@ -6,6 +6,9 @@ tools:
   - jointorient
   - controlrig
   - symmesh
-  - rigbuilder
   - rigtoolbox
+  - rigscript
+  - rigbuilder
   - rignode
+  - spaceswitcher
+  - jointfacialrig
