@@ -32,7 +32,7 @@ suffixes:
 auto_suffixes:
   mesh: geo
   joint: jnt
-  jointEnd: jntEnd
+  jointEnd: je
   ikHandle: ikHdl
   ikHandleRp: ikRp
   ikRPsolver: ikRp
@@ -69,3 +69,6 @@ auto_suffixes:
   controller: ctrl
   camera: cam
   clusterHandle: cls
+  poleVector: pv
+  remapValue: remap
+  expression: expr

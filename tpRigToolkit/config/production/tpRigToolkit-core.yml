@@ -8,7 +8,11 @@ tools:
   - symmesh
   - rigtoolbox
   - rigscript
-  - rigbuilder
-  - rignode
+  # - rigbuilder
+  # - rignode
   - spaceswitcher
+  - skeletoncreator
   - jointfacialrig
+  - interpolateit
+  - musclespline
+  - puppeteer

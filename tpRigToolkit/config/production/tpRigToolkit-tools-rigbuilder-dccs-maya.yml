@@ -1,4 +1,0 @@
-#  Configuration file for tpRigToolkit-tools-rigbuilder-dccs-maya
-
-# List that defines the list of modules that will be skipped during import/reload process
-skip_modules: []
